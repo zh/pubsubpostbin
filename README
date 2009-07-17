@@ -12,8 +12,8 @@ In the moment however it cannot be used directly like a callback from
 PubSubHubbub hubs (like for example Superfeedr or http://pubsubhubbub.appspot.com/)
 because:
 
-- It does not pass the GET PSHB hubs verification for callbacks
-- PSHB hubs are sending Atom entries, which are not very human-eyes friendly.
+ - It does not pass the GET PSHB hubs verification for callbacks
+ - PSHB hubs are sending Atom entries, which are not very human-eyes friendly.
 
 The purpose of this project is to create a very thin wrapper around PostBin for
 fixing the two issues mentioned above.
@@ -22,4 +22,16 @@ fixing the two issues mentioned above.
 Usage
 ------
 
-TODO
+ - Create new page on http://postbin.org/ (for example http://www.postbin.org/xXzZaa)
+ - On the PubSubHubbub subscribe page for "Callback" enter:
+
+   http://callback.example.com/xXzZaa   (adjust for your install)
+
+ - If using Superfeedr, on your "Settings" page search: 
+
+  ...The content of the page should just be "1234abs4321"...
+
+ - Set the Notifications to "PubSubhubbub" and for "Webhook URL" enter: 
+
+  http://callback.example.com/superfeedr/1234abs4321/xXzZaa   (adjust for your install)
+

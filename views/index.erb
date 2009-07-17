@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head><title>PubSubPostBin - using http://postbin.org/ for PSH or Superfeedr callbacks debugging</title>
+</head>
+<body>
+<h1>PubSubPostBin</h1>
+<strong class="tagline"> using http://postbin.org/ for PSH or Superfeedr callbacks debugging</strong>
+<br/>
+<br/>
+<ul>
+  <li>Create new page on <a href="http://postbin.org/">http://postbin.org/</a> 
+  (for example http://www.postbin.org/<strong>xXzZaa</strong>)</li>
+  <li>On the <a href="http://pubsubhubbub.appspot.com/subscribe">PubSubHubbub subscribe page</a>
+  for "Callback" enter:<br/>
+  <pre>http://callback.example.com/<strong>xXzZaa</strong> (adjust for your install)</pre>
+  </li>
+  <li>If using <a href="http://superfeedr.com">Superfeedr</a>, on your "Settings" page search:
+  <small><i>...The content of the page should just be <strong>"1234abs4321"...</strong></i></small></li>
+  <li>Set the <i>Notifications</i> to <strong>"PubSubhubbub"</strong> and for <i>"Webhook URL"</i> enter:<br/>
+  <pre>http://callback.example.com/superfeedr/<strong>1234abs4321/xXzZaa</strong> (adjust for your install)</pre>
+  </li>
+</ul>  
+<br/>
+Run it <a href="http://github.com/zh/pubsubpostbin">locally (GitHub repository)</a> on your own server, 
+or using <a href="http://callback.heroku.com/">http://callback.heroku.com/</a>
+</body>
+</html>

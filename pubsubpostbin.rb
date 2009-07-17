@@ -54,6 +54,9 @@ helpers do
 
 end
 
+get '/' do
+  erb :index
+end
 
 # Superfeedr
 get '/superfeedr/:secret/:id' do
