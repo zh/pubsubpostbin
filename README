@@ -1,0 +1,25 @@
+PubSubPostBin
+==============
+
+  Using http://postbin.org/ for debugging PubSubHubbub callbacks
+
+
+Overview
+---------
+
+http://postbin.org/ is an excelent service for debugging webhooks. 
+In the moment however it cannot be used directly like a callback from
+PubSubHubbub hubs (like for example Superfeedr or http://pubsubhubbub.appspot.com/)
+because:
+
+- It does not pass the GET PSHB hubs verification for callbacks
+- PSHB hubs are sending Atom entries, which are not very human-eyes friendly.
+
+The purpose of this project is to create a very thin wrapper around PostBin for
+fixing the two issues mentioned above.
+
+
+Usage
+------
+
+TODO
