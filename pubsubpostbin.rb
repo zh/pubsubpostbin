@@ -70,6 +70,7 @@ module PubSubPostBin
     post '/superfeedr/:secret/:id' do
       msg = atom_parse(request.body.string)
       postman("http://postbin.org/#{params[:id]}", msg)
+      "OK"
     end 
     
     
@@ -81,6 +82,7 @@ module PubSubPostBin
     post '/:id' do
       msg = atom_parse(request.body.string)
       postman("http://www.postbin.org/#{params[:id]}", msg)
+      "OK"
     end
 
   end
